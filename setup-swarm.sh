@@ -23,7 +23,7 @@ do
      echo "Configuring $manager ..."
 	 export DOCKER_HOST="$manager":$DAEMON_PORT
      docker swarm join --manager $PRIMARY_MANAGER
-     sleep 2
+     sleep 5
 done
 
 ## declare the worker nodes
@@ -41,7 +41,7 @@ do
 	echo "Configuring $worker ..."
     export DOCKER_HOST="$worker":$DAEMON_PORT
     docker swarm join $PRIMARY_MANAGER
-    sleep 2
+    sleep 5
 done
 
 sleep 2

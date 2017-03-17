@@ -3,9 +3,7 @@ services:
   swarm-manager-1:
     container_name: swarm-manager-1
     hostname: swarm-manager-1
-    build:
-      context: .
-    image: docker:rc-dind-sw
+    image: docker:rc-dind
     mem_limit: 1G
     networks:
       - swarm-net
